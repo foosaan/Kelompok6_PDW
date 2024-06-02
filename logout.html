@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logout</title>
+</head>
+<body>
+
+<script>
+// Function to delete a cookie
+function deleteCookie(name) {
+    document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+
+// Call the function to delete the 'loggedIn' cookie
+deleteCookie('loggedIn');
+
+// Redirect to the login page
+window.location.href = 'index.html';
+</script>
+
+</body>
+</html>
