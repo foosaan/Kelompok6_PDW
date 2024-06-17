@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Admin Pricelist Management">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Admin Pricelist</title>
+    <link href="../css/responsive.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header Area Start -->
+    <header class="header-area">
+        <div class="container-fluid h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 h-100">
+                    <div class="main-menu h-100">
+                        <nav class="navbar h-100 navbar-expand-lg">
+                            <a class="navbar-brand" href="index.html"><img src="../image/bg-img/Group 1.png" width="240px" alt="Logo"></a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#studioMenu" aria-controls="studioMenu" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i> Menu</button>
+                            <div class="collapse navbar-collapse" id="studioMenu">
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="../logout.html">Logout</a>
+                                    </li>
+                                </ul>
+                                <div class="header-search-form ml-auto">
+                                    <form action="#">
+                                        <input type="search" class="form-control" placeholder="Input your keyword then press enter..." id="search" name="search">
+                                        <input class="d-none" type="submit" value="submit">
+                                    </form>
+                                </div>
+                                <div id="searchbtn">
+                                    <img src="../img/core-img/search.png" alt="">
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->
+
+    
+    
+    <!-- Pricelist Admin Area Start -->
+    <section class="pricelist-area section-padding-100 center-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading text-center">
+                        <h2>Admin Pricelist</h2>
+                        <p>Manage your packages</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row admin-actions">
+                <button class="btn studio-btn" onclick="showCreateForm()">Add New Plan</button>
+            </div>
+
+            <div class="row" id="plans-container">
+                <!-- Existing Price Plans -->
+                <!-- Example Plan 1 -->
+                <div class="col-12 col-md-6 col-lg-4" id="plan-1">
+                    <div class="single-price-plan text-center">
+                        <div class="plan-image">
+                            <img src="../image/core-img/jennie1.jpg" alt="Basic Plan Image">
+                        </div>
+                        <div class="plan-title">
+                            <h4>Basic Plan</h4>
+                            <p>Perfect for individuals</p>
+                        </div>
+                        <div class="plan-price">
+                            <h4>$199</h4>
+                            <p>Per Session</p>
+                        </div>
+                        <div class="plan-description">
+                            <p>1 Hour Session</p>
+                            <p>10 Digital Images</p>
+                            <p>1 Location</p>
+                        </div>
+                        <div class="plan-button">
+                            <button class="btn btn-warning" onclick="showEditForm('plan-1')">Edit</button>
+                            <button class="btn btn-danger" onclick="deletePlan('plan-1')">Delete</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example Plan 2 -->
+                <div class="col-12 col-md-6 col-lg-4" id="plan-2">
+                    <div class="single-price-plan text-center">
+                        <div class="plan-image">
+                            <img src="../image/core-img/jennie1.jpg" alt="Standard Plan Image">
+                        </div>
+                        <div class="plan-title">
+                            <h4>Standard Plan</h4>
+                            <p>Great for couples</p>
+                        </div>
+                        <div class="plan-price">
+                            <h4>$299</h4>
+                            <p>Per Session</p>
+                        </div>
+                        <div class="plan-description">
+                            <p>2 Hour Session</p>
+                            <p>20 Digital Images</p>
+                            <p>2 Locations</p>
+                        </div>
+                        <div class="plan-button">
+                            <button class="btn btn-warning" onclick="showEditForm('plan-2')">Edit</button>
+                            <button class="btn btn-danger" onclick="deletePlan('plan-2')">Delete</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Example Plan 3 -->
+                <div class="col-12 col-md-6 col-lg-4" id="plan-3">
+                    <div class="single-price-plan text-center">
+                        <div class="plan-image">
+                            <img src="../image/core-img/jennie1.jpg" alt="Premium Plan Image">
+                        </div>
+                        <div class="plan-title">
+                            <h4>Premium Plan</h4>
+                            <p>Ideal for families</p>
+                        </div>
+                        <div class="plan-price">
+                            <h4>$499</h4>
+                            <p>Per Session</p>
+                        </div>
+                        <div class="plan-description">
+                            <p>4 Hour Session</p>
+                            <p>50 Digital Images</p>
+                            <p>3 Locations</p>
+                        </div>
+                        <div class="plan-button">
+                            <button class="btn btn-warning" onclick="showEditForm('plan-3')">Edit</button>
+                            <button class="btn btn-danger" onclick="deletePlan('plan-3')">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Create/Edit Plan Form -->
+            <div class="row" id="plan-form" style="display: none;">
+                <div class="col-12">
+                    <div class="section-heading text-center">
+                        <h2 id="form-title">Create New Plan</h2>
+                    </div>
+                    <form id="crud-form" enctype="multipart/form-data">
+                        <input type="hidden" id="plan-id" name="plan-id">
+                        <div class="form-group">
+                            <label for="plan-title">Title</label>
+                            <input type="text" id="plan-title" name="plan-title" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="plan-price">Price</label>
+                            <input type="number" id="plan-price" name="plan-price" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="plan-description">Description</label>
+                            <textarea id="plan-description" name="plan-description" class="form-control" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="plan-image">Image</label>
+                            <input type="file" id="plan-image" name="plan-image" class="form-control" accept="image/*" required>
+                        </div>
+                        <button type="submit" class="btn studio-btn">Save</button>
+                        <button type="button" class="btn btn-secondary" onclick="hideForm()">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pricelist Admin Area End -->
+
+    <!-- Contoh struktur HTML yang konsisten -->
+
+
+
+    <!-- jQuery -->
+    <script src="../js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="../js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="../js/plugins.js"></script>
+    <script src="../js/active.js"></script>
+    <!-- Custom js -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>

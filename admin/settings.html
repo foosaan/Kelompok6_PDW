@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags must come first in the head; any other head content must come after these tags -->
+
+    <!-- Title  -->
+    <title>Pricelist</title>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="../img/core-img/favicon.ico">
+
+    <!-- Core Style CSS -->
+    <link rel="stylesheet" href="../css/core-style.css">
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Responsive CSS -->
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <style>
+        .center-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Gradient Background Overlay -->
+    <div class="gradient-background-overlay"></div>
+
+    <!-- Header Area Start -->
+    <header class="header-area bg-img" style="background-image: url(img/bg-img/14.jpg);">
+        <div class="container-fluid h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 h-100">
+                    <div class="main-menu h-100">
+                        <nav class="navbar h-100 navbar-expand-lg">
+                            <!-- Logo Area  -->
+                            <a class="navbar-brand" href="index.html"><img src="../image/bg-img/Group 1.png" width="240px" alt="Logo"></a>
+
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#studioMenu" aria-controls="studioMenu" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i> Menu</button>
+
+                            <div class="collapse navbar-collapse" id="studioMenu">
+                                <!-- Menu Area Start  -->
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="index.html">Home</a>
+                                            <a class="dropdown-item" href="about-me.html">About</a>
+                                            <a class="dropdown-item" href="portfolio.html">Portfolio</a>
+                                            <a class="dropdown-item" href="contact.html">Contact</a>
+                                            <a class="dropdown-item" href="pricelist.html">Pricelist</a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="about-me.html">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="pricelist.html">Pricelist</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="contact.html">Contact</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="login.html">Login</a>
+                                    </li>
+                                </ul>
+                                <!-- Search Form -->
+                                <div class="header-search-form ml-auto">
+                                    <form action="#">
+                                        <input type="search" class="form-control" placeholder="Input your keyword then press enter..." id="search" name="search">
+                                        <input class="d-none" type="submit" value="submit">
+                                    </form>
+                                </div>
+                                <!-- Search btn -->
+                                <div id="searchbtn">
+                                    <img src="../img/core-img/search.png" alt="">
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->
+
+    <!-- Social Sidebar Area Start -->
+    <div class="social-sidebar-area">
+        <!-- Social Area -->
+        <div class="social-info-area">
+            <a href="https://www.instagram.com/foosaan/" data-toggle="tooltip" data-placement="right" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i> <span>Instagram</span></a>
+            <a href="https://www.behance.net/fauzanalfikri" data-toggle="tooltip" data-placement="right" title="Behance"><i class="fa fa-behance" aria-hidden="true"></i> <span>Behance</span></a>
+        </div>
+    </div>
+    <!-- Social Sidebar Area End -->
+
+    <!-- Pricelist Area Start -->
+    <section class="pricelist-area section-padding-100 center-content">
+        <div class="container">
+            <div class="row">
+                <!-- Section Heading -->
+                <div class="col-12">
+                    <div class="section-heading text-center">
+                        <h2>Our Pricelist</h2>
+                        <p>Choose the best package for your needs</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="pricelistContainer">
+                <!-- Pricelist items will be dynamically populated here -->
+            </div>
+
+            <!-- Admin Pricelist Management -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card mb-4">
+                        <div class="card-header">Add Pricelist</div>
+                        <div class="card-body">
+                            <form id="addPricelistForm">
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="photoType">Photo Type</label>
+                                        <input type="text" class="form-control" id="photoType" placeholder="Photo Type" required>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="price">Price</label>
+                                        <input type="number" class="form-control" id="price" placeholder="Price" required>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="description">Description</label>
+                                        <input type="text" class="form-control" id="description" placeholder="Description" required>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Add Pricelist</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">Pricelist</div>
+                        <div class="card-body">
+                            <table class="table table-striped" id="pricelistTable">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Photo Type</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Description</th>
+                                        <th scope="col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Pricelist items will be dynamically populated here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pricelist Area End -->
+
+    <!-- Edit Pricelist Modal -->
+    <div class="modal fade" id="editPricelistModal" tabindex="-1" role="dialog" aria-labelledby="editPricelistModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editPricelistModalLabel">Edit Pricelist</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="editPricelistForm">
+                        <div class="form-group">
+                            <label for="editPhotoType">Photo Type</label>
+                            <input type="text" class="form-control" id="editPhotoType" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editPrice">Price</label>
+                            <input type="number" class="form-control" id="editPrice" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editDescription">Description</label>
+                            <input type="text" class="form-control" id="editDescription" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Area Start -->
+    <footer class="footer-area">
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <div class="col-12 h-100">
+                    <div class="footer-content h-100 d-md-flex align-items-center justify-content-between">
+                        <!-- Single Footer Content -->
+                        <div class="single-footer-content">
+                            <img src="../img/core-img/map.png" alt="">
+                            <a href="https://maps.app.goo.gl/ScwxhRDxKJXvVUxu8">Jl. Patriot Bangsa II, Ngebel, Tamantirto, Kasihan, Bantul, DI Yogyakarta</a>
+                            <p>RAMA RAMDANI (20220140098) | M Zuhair Zaidan (20220140059) </p>
+                            <p> M Faris Abqari (20220140097) | Bimo Aditya (20220140065) | Fauzan Alfikri (20220140096)</p>
+                        </div>
+                        <!-- Single Footer Content -->
+                        <div class="single-footer-content">
+                            <img src="img/core-img/smartphone.png" alt="">
+                            <a href="https://api.whatsapp.com/send/?phone=%2B6281225487266&text&type=phone_number&app_absent=0">+62 8122 5487 266</a>
+                        </div>
+                        <!-- Single Footer Content -->
+                        <div class="single-footer-content">
+                            <img src="img/core-img/envelope-2.png" alt="">
+                            <a href="mailto:EyesLens01@gmail.com">EyesLens01@company.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+
+    <!-- jQuery (Necessary for All JavaScript Plugins) -->
+    <script src="../js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="../js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="../js/plugins.js"></script>
+    <!-- Active js -->
+    <script src="../js/active.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            let pricelist = [
+                { id: 1, type: "Basic Plan", price: 199, description: "Perfect for individuals" },
+                { id: 2, type: "Standard Plan", price: 299, description: "Great for couples" },
+                { id: 3, type: "Premium Plan", price: 499, description: "Ideal for families" }
+            ];
+
+            function renderPricelist() {
+                const pricelistTableBody = $("#pricelistTable tbody");
+                const pricelistContainer = $("#pricelistContainer");
+                pricelistTableBody.empty();
+                pricelistContainer.empty();
+                pricelist.forEach(item => {
+                    pricelistTableBody.append(`
+                        <tr>
+                            <th scope="row">${item.id}</th>
+                            <td>${item.type}</td>
+                            <td>$${item.price}</td>
+                            <td>${item.description}</td>
+                            <td>
+                                <button class="btn btn-info btn-sm edit-btn" data-id="${item.id}" data-toggle="modal" data-target="#editPricelistModal">Edit</button>
+                                <button class="btn btn-danger btn-sm delete-btn" data-id="${item.id}">Delete</button>
+                            </td>
+                        </tr>
+                    `);
+
+                    pricelistContainer.append(`
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="single-price-plan text-center">
+                                <!-- Plan Image -->
+                                <div class="plan-image">
+                                    <img src="image/core-img/jennie1.jpg" alt="${item.type} Image">
+                                </div>
+                                <!-- Plan Title -->
+                                <div class="plan-title">
+                                    <h4>${item.type}</h4>
+                                    <p>${item.description}</p>
+                                </div>
+                                <!-- Plan Price -->
+                                <div class="plan-price">
+                                    <h4>$${item.price}</h4>
+                                    <p>Per Session</p>
+                                </div>
+                                <!-- Plan Button -->
+                                <div class="plan-button">
+                                    <a href="#" class="btn studio-btn">Choose Plan</a>
+                                </div>
+                            </div>
+                        </div>
+                    `);
+                });
+            }
+
+            // Render pricelist on page load
+            renderPricelist();
+
+            // Add pricelist form submit event
+            $("#addPricelistForm").on("submit", function(e) {
+                e.preventDefault();
+                const newType = $("#photoType").val();
+                const newPrice = $("#price").val();
+                const newDescription = $("#description").val();
+                const newId = pricelist.length ? pricelist[pricelist.length - 1].id + 1 : 1;
+                pricelist.push({ id: newId, type: newType, price: newPrice, description: newDescription });
+                renderPricelist();
+                this.reset();
+            });
+
+            // Edit button click event
+            $(document).on("click", ".edit-btn", function() {
+                const id = $(this).data("id");
+                const pricelistItem = pricelist.find(item => item.id == id);
+                $("#editPhotoType").val(pricelistItem.type);
+                $("#editPrice").val(pricelistItem.price);
+                $("#editDescription").val(pricelistItem.description);
+                $("#editPricelistForm").data("id", id);
+            });
+
+            // Edit pricelist form submit event
+            $("#editPricelistForm").on("submit", function(e) {
+                e.preventDefault();
+                const id = $(this).data("id");
+                const editedType = $("#editPhotoType").val();
+                const editedPrice = $("#editPrice").val();
+                const editedDescription = $("#editDescription").val();
+                const pricelistItem = pricelist.find(item => item.id == id);
+                pricelistItem.type = editedType;
+                pricelistItem.price = editedPrice;
+                pricelistItem.description = editedDescription;
+                renderPricelist();
+                $("#editPricelistModal").modal("hide");
+            });
+
+            // Delete button click event
+            $(document).on("click", ".delete-btn", function() {
+                const id = $(this).data("id");
+                pricelist = pricelist.filter(item => item.id != id);
+                renderPricelist();
+            });
+        });
+    </script>
+</body>
+
+</html>
