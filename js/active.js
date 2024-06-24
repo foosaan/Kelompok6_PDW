@@ -108,7 +108,10 @@
                 tCounter: '<span class="mfp-counter">%curr% of %total%</span>'
             }
         });
+        
     }
+
+    
 
     // Gallery Menu Style Active Code
     $('.portfolio-menu button.btn').on('click', function () {

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Admin Dashboard">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/core-style.css">
+    <link href="../css/responsive.css" rel="stylesheet">
+    <link href="dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header Area Start -->
+    <header class="header-area bg-img" style="background-image: url('../img/bg-img/14.jpg');">
+        <div class="container-fluid h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 h-100">
+                    <div class="main-menu h-100">
+                        <nav class="navbar h-100 navbar-expand-lg">
+                            <a class="navbar-brand" href="dashboard.html"><img src="../image/bg-img/Group 1.png" width="240px" alt="Logo"></a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#studioMenu" aria-controls="studioMenu" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i> Menu</button>
+                            <div class="collapse navbar-collapse" id="studioMenu">
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="../logout.html">Logout</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->
+
+    <!-- Admin Dashboard Content -->
+    <section class="admin-dashboard-area section-padding-100 center-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading text-center">
+                        <h2>Admin Dashboard</h2>
+                        <p>Welcome, Admin!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row admin-actions">
+                <!-- Manage Pricelist -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="admin-action">
+                        <h3>Manage Pricelist</h3>
+                        <a href="pricelist.html" class="btn studio-btn">Go to Pricelist Management</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Admin Dashboard Content End -->
+
+    <!-- jQuery -->
+    <script src="../js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="../js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="../js/plugins.js"></script>
+    <script src="../js/active.js"></script>
+    <!-- Custom js -->
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

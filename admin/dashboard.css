@@ -1,0 +1,71 @@
+ /* Additional inline styles or overrides can be placed here if necessary */
+ .header-area {
+    background-image: url('../img/bg-img/14.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px 0;
+}
+
+.navbar-brand img {
+    max-width: 100%;
+    height: auto;
+}
+
+.navbar-toggler {
+    color: #333;
+    border-color: #333;
+}
+
+.navbar-toggler:hover {
+    color: #555;
+    border-color: #555;
+}
+
+.admin-actions {
+    margin-top: 30px;
+}
+
+.admin-action {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.admin-action:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.admin-action h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.btn.studio-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn.studio-btn:hover {
+    background-color: #45a049;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.section-heading p {
+    font-size: 18px;
+    color: #777;
+}

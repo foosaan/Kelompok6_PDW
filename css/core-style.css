@@ -30,6 +30,8 @@
 
 /* :: 3.0 Common/Base CSS */
 
+
+
 * {
     margin: 0;
     padding: 0;
@@ -867,6 +869,10 @@ img {
     width: 100%;
 }
 
+.column_single_gallery_item video {
+    width: 100%;
+}
+
 .hover_overlay {
     position: absolute;
     width: calc(100% - 30px);
@@ -884,7 +890,7 @@ img {
     -ms-flex-pack: center;
     justify-content: center;
     opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    /*---ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";*/
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
 }
@@ -896,8 +902,10 @@ img {
 
 .column_single_gallery_item:hover .hover_overlay {
     opacity: 1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";*/
 }
+
+
 
 /* :: 11.0 Blog & Contact Area CSS */
 
